@@ -1,38 +1,79 @@
-/*
+    /*
 Lección 3: Tarea de posicionamiento con CSS. Todo el trabajo debe hacerse en este archivo, por lo que si estás tocando cualquier otro
 archivo en cualquiera de estas carpetas, estás en el lugar equivocado.
 */
+    /* Ejercicio 1: Centrar el texto en un span */
+    /* Arrancaremos este ejercicio por vos: */
+    /* en CSS si se comenta asi  en html es <--!---> 
+ok EN EL ARCHIVO HTML (SOLO ES DE INSTRUCCIONES NO SE TOCA
+LOS <span IDENTIFICAMOS LOS TAGS Y LOS CSS QUE PONGAMOS AQUI AFECTARARN PERO EN 
+LOS TAGS QUE TENGA EL HTML ; SE LEE EN EL HTML PERO SE EJECUTAN SOLO LOS CSS 
+QUE HACEN REFERENCIAS A LOS TAGS DEL HTML,  AQUI*/
+    
+    #ejercicioUno {
+        /* Define la propiedad "display" para que sea "block" y centra el texto usando "text-align" */
+        /* aqui no van los nada de tags del archivo html como <span> sino solo comandos de css 
+    aqui solo van tags de css  y el # o almohadilla es para precisamente referenciar a esos tgs de css */
+        display: block;
+        text-align: center;
+    }
+    /* Ejercicio 2: Posicionar el header */
+    /* Acá va tu código */
+    
+    #ejercicioDos {
+        display: none;
+    }
+    /* Ejercicio 3: */
+    /* Acá va tu código */
+    /* Esto HACE REFERENCIA A ESTE TAG PERO DEL HTML <img id="ejercicioTres" src="./assets/img/artic-fox.png" />
+Y Aquí EN CSS SE REFERENCÍA Con este #ejercicioTres */
+    
+    #ejercicioTres {
+        position: relative;
+        margin-top: 100px;
+        margin-left: 200px;
+    }
+    /* Ejercicio 4: */
+    /* Acá va tu código */
+    
+    #ejercicioCuatro {
+        position: fixed;
+        top: 0px;
+        left: 0px
+        /* Ejercicio 5: */
+        /* Acá va tu código */
+    }
+    
+    #ejercicioCinco {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    /* Ejercicio 6. */
+    
+    #ejercicioCinco {
+        flex-direction: row-reverse;
+    }
+    /* Ejercicio 7. */
+    
+    #ejercicioSiete {
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        /* Puedes jugar con estos valores cambiando los valores 
+        de esto 3 tgs  con clic derecho e inspeccionar página */
+    }
+    /* SUBIR TODO A © 2021 GitHub, Inc. */
+    
+    #ejercicioSiete {
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        /* Puedes jugar con estos valores cambiando los valores 
+        de esto 3 tgs  con clic derecho e inspeccionar página */
+    }
+    /* SUBIR TODO A © 2021 GitHub, Inc. */
+    /* se hace con 3 comandos de git
 
-/* Ejercicio 1: Centrar el texto en un span */
-
-/* Arrancaremos este ejercicio por vos: */
-#ejercicioUno {
-
-}
-
-
-/* Ejercicio 2: Posicionar el header */
-
-/* Acá va tu código */
-
-
-
-/* Ejercicio 3: */
-
-/* Acá va tu código */
-
-
-
-/* Ejercicio 4: */
-
-/* Acá va tu código */
-
-
-
-/* Ejercicio 5: */
-
-/* Acá va tu código */
-
-
-
-/* Ejercicio 6. */
+ $ git status, $git add, $git commi-m 'comentario para identificarlo caundo quede subido en github'
+y $ git push para empujar y ya subir al repositorio  */
