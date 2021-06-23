@@ -8,12 +8,56 @@ function crearUsuario() {
   // {{nombre}} debe ser el nombre definido en cada instancia
   // Devuelve la clase
   // Tu código:
-}
+  //class Usuario(opciones) {   this=Usuario
+    class Usuario{
+    constructor (opciones){  //En Clases no es Costructor con C mayuscula sino minuscula  y en prototipos si es con C mayuscula--si esta pasado como parámetro con mayuscula sino con minuscula o se dependiendo de como esté declarado
+    this.usuario=opciones.usuario
+    this.nombre=opciones.nombre
+    this.email=opciones.email
+    this.password=opciones.password  
+    }
+    saludar(){
+      return "Hola, mi nombre es " + this.nombre
+    }
+    
+    
+  }
+  return Usuario
 
+}
+/*Ya no es 
+
+   (objeto)Usuario={
+  propiedades: valor
+sino de la forma ES6  con class
+
+}*/
+/* el this es para no hacer toda esta vaina notar como tuve que poner toda la ruta del objeto en cada uno
+
+class Usuario{
+    constructor (opciones){  //En Clases no es Costructor con C mayuscula sino minuscula  y en prototipos si es con C mayuscula--si esta pasado como parámetro con mayuscula sino con minuscula o se dependiendo de como esté declarado
+    Usuario.usuario=opciones.usuario
+    Usuario.nombre=opciones.nombre
+    Usuario.email=opciones.email
+    Usuario.password=opciones.password  
+    }
+    saludar(){
+      return "Hola, mi nombre es " + Usuario.opciones.nombre
+    }
+    
+    
+  }
+  return Usuario
+y con THIS ya te lo evitas porque en todos los renglones hara referencia a la ruta y propiedades de el objeto Usuario
+
+*/
 function agregarMetodoPrototype(Constructor) {
   // Agrega un método al Constructor del `prototype`
   // El método debe llamarse "saludar" y debe devolver la string "Hello World!"
   // Tu código:
+  Constructor.prototype.saludar = function(){
+    return "Hello World!"
+  }
 }
 
 function agregarStringInvertida() {
@@ -22,6 +66,9 @@ function agregarStringInvertida() {
   // Ej: 'menem'.reverse() => menem
   // 'toni'.reverse() => 'inot'
   // Pista: Necesitarás usar "this" dentro de "reverse"
+
+  //NOTA AL INVESTIGAR el reverse pasa el string al array es lo opuesto a join (que pasa un arreglo a string)
+  String.prototype.reverse = function (){ return this.split("").reverse().join(""); }
 }
 
 // ---------------------------------------------------------------------------//
@@ -36,22 +83,30 @@ function agregarStringInvertida() {
     //  }
 
   class Persona {
-    constructor(/*Escribir los argumentos que recibe el constructor*/) {
+    constructor(nombre, apellido, edad, dir/*Escribir los argumentos que recibe el constructor*/) {
       // Crea el constructor:
-
-    }
+      // this.nombre=nombre; this.apellido=apellido; this.edad=edad; this.dir=dir; } detalle(){ return "Nombre: "+ this.nombre, "Apellido: "+this.apellido, "Edad: "+this.edad, "Domicilio: "+this.dir }
+       this.nombre=nombre; this.apellido=apellido; this.edad=edad; this.dir=dir; } 
+       detalle(){ 
+         return 
+         "Nombre: "+ this.nombre, "Apellido: "+this.apellido, "Edad: "+this.edad, "Domicilio: "+this.dir }
+    
 }
 
-function crearInstanciaPersona(nombre, apellido, edad, dir) {
+function crearInstanciaPersona(nombre, apellido, edad, dir) { //VA LIGADO CON EL CONSTRUCTOR DE ARRIBLA DE LA CLASE Persona
   //Con esta función vamos a crear una nueva persona a partir de nuestro constructor de persona (creado en el ejercicio anterior)
   //Recibirá los valores "Juan", "Perez", 22, "Saavedra 123" para sus respectivas propiedades
   //Devolver la nueva persona creada
+memo= new Persona('Juan', 'Perez', 23, 'Saavedra123')
+return memo
+
 }
   
 function agregarMetodo() {
   //La función agrega un método "datos" a la clase Persona que toma el nombre y la edad de la persona y devuelve: 
   //Ej: "Juan, 22 años"
-}
+  Persona.prototype.datos = function(){return this.nombre + ", " + this.edad + " años" }  //This=persona Ej this.nombre
+}  // el espacio en + "  años" era importante si no dijera 22años y debe ser 22 años  
   
 
 // No modificar nada debajo de esta línea
